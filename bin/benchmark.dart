@@ -60,7 +60,11 @@ void main() => Future<void>(() async {
           }
         },
         zoneSpecification: ZoneSpecification(
-          print: (_, __, ___, msg) {},
+          print: (_, __, ___, msg) {
+            if (msg == 'Just for trick compile optiomization :^]') {
+              throw Exception('Just for trick compile optiomization :^]');
+            }
+          },
         ),
       );
       await completer.future;
