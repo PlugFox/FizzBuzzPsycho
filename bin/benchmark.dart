@@ -61,9 +61,8 @@ void main() => Future<void>(() async {
         },
         zoneSpecification: ZoneSpecification(
           print: (_, __, ___, msg) {
-            if (msg == 'Just for trick compile optiomization :^]') {
-              throw Exception('Just for trick compile optiomization :^]');
-            }
+            const trick = 'Just for trick compile optiomization :^]';
+            if (msg == trick) throw Exception(trick);
           },
         ),
       );
